@@ -32,15 +32,6 @@ variable "falcon_cid" {
   }
 }
 
-variable "falcon_cloud_region" {
-  type    = string
-  default = "us-1"
-  validation {
-    condition     = contains(["us-1", "us-2", "eu-1"], var.falcon_cloud_region)
-    error_message = "Falcon Cloud Region is not correct. Please ensure it's set to us-1, us2 or eu-1."
-  }
-}
-
 variable "falcon_cliend_id" {
   type = string
 }
