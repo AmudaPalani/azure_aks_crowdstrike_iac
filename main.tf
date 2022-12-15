@@ -47,8 +47,8 @@ resource "kubernetes_secret" "cs-cr-pullsecret" {
       auths = {
         "registry.crowdstrike.com" = {
           "username" = "fc-${local.falcon_cid}"
-          "password" = "${var.falcon_sensor_cr_token}"
-          "auth"     = base64encode("fc-${local.falcon_cid}:${var.falcon_sensor_cr_token}")
+          "password" = "${var.falcon_sensor_token}"
+          "auth"     = base64encode("fc-${local.falcon_cid}:${var.falcon_sensor_token}")
         }
       }
     })
